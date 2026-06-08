@@ -24,12 +24,9 @@ public class PedidoService {
     public List<Pedido> listar(){
         return pedidoRepository.findAll();
     }
-    public List<Pedido> listarPorCliente(String cpf){
-        Optional<Cliente> cliente = clienteService.carregar(cpf);
-        if(cliente.isPresent()){
-            return pedidoRepository.findPedidoByCliente(cliente.get());
-        }
-        return Collections.emptyList();
+    public List<Pedido> listarPorCliente(Cliente cliente){
+        Cliente obj = clienteRepository.findCpf(cliente.getCpf());
+        return pedidoRepository.findPedidoByCliente(obj.getCodigo());
     }
     public Optional<Pedido> carregar(Integer codigo){
         return pedidoRepository.findById(codigo);

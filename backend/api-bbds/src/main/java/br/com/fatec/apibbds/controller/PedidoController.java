@@ -24,9 +24,9 @@ public class PedidoController {
     public List<Pedido> listar(){
         return pedidoService.listar();
     }
-    @GetMapping("/{cpf}")
-    public List<Pedido> listarPorCliente(@PathVariable String cpf){
-        return pedidoService.listarPorCliente(cpf);
+    @PostMapping("/cliente")
+    public List<Pedido> listarPorCliente(@RequestBody Cliente cliente){
+        return pedidoService.listarPorCliente(cliente);
     }
     @GetMapping("/{id}")
     public ResponseEntity<Pedido> carregar(@PathVariable Integer codigo){

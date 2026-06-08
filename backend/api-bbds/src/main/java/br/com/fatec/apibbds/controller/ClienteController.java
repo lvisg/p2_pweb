@@ -32,7 +32,6 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<?> salvar(@RequestBody Cliente cliente) {
-        System.out.println(cliente.getNome() + cliente.getCodigo());
         try {
             clienteService.salvar(cliente);
             return ResponseEntity.status(HttpStatus.CREATED).body(cliente);

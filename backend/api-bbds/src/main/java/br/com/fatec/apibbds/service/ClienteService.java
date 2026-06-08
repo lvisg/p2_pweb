@@ -5,6 +5,7 @@ import br.com.fatec.apibbds.model.Cliente;
 import br.com.fatec.apibbds.model.Email;
 import br.com.fatec.apibbds.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
+import br.com.fatec.apibbds.service.FerramentaService;
 
 import java.util.List;
 import java.util.Optional;
