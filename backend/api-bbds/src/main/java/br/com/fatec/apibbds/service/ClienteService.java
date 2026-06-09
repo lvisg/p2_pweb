@@ -50,7 +50,6 @@ public class ClienteService {
             obj.setEstado(cliente.getEstado());
             obj.setCidade(cliente.getCidade());
             obj.setSenha(cliente.getSenha());
-            obj.setDataNascimento(cliente.getDataNascimento());
             return clienteRepository.save(obj);
         });
     }

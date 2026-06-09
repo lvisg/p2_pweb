@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/produto")
 public class ProdutoController {
@@ -22,5 +23,11 @@ public class ProdutoController {
     @GetMapping("/busca")
     public ResponseEntity<Page<Produto>> buscar(@RequestParam String termo, @RequestParam(defaultValue = "12") int tamanho, @RequestParam(defaultValue = "0") int page) {
         return ResponseEntity.ok(produtoService.buscar(termo, tamanho, page));
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<Produto> alterar(@RequestBody Produto produto, @PathVariable Integer id){
+        return produtoService.alterar(produto, id).
+                map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }

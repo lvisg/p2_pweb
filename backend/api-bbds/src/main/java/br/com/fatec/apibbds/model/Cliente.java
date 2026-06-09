@@ -27,7 +27,6 @@ public class Cliente {
     private String bairro;
     private String estado;
     private String cidade;
-    private LocalDate dataNascimento;
     private String senha;
 
     public Cliente() {
@@ -147,11 +146,5 @@ public class Cliente {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-    public void setDataNascimento(LocalDate dataNascimento){
-        this.dataNascimento=dataNascimento;
-    }
-    public LocalDate getDataNascimento(){
-        return dataNascimento;
     }
 }
