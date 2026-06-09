@@ -1,0 +1,99 @@
+<div class="container my-5 px-lg-4">
+  <header class="mb-5 text-center">
+    <h1 class="display-6 fw-bold text-dark">Meus Pedidos</h1>
+    <p class="text-muted">Acompanhe o histórico e o status das suas compras na BBDS</p>
+  </header>
+
+  @if (estaLogado && pedidos.length > 0) {
+    <div class="accordion shadow-sm" id="accordionPedidos">
+      @for (pedido of pedidos; track pedido.codigo; let i = $index) {
+        <div class="accordion-item border-0 mb-3 shadow-sm rounded-4 overflow-hidden">
+
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed py-3 px-4" type="button"
+                    data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i">
+              <div class="d-flex flex-wrap justify-content-between w-100 align-items-center me-3">
+                <div class="me-4 text-start">
+                  <span class="text-uppercase small fw-bold text-primary d-block">Pedido</span>
+                  <span class="fw-bold fs-5">#{{pedido.codigo}}</span>
+                </div>
+
+                <div class="me-4 text-start">
+                  <span class="text-uppercase small fw-bold text-muted d-block">Data</span>
+                  <span class="fw-medium">{{pedido.data}}</span>
+                </div>
+
+                <div class="me-4 text-start">
+                  <span class="text-uppercase small fw-bold text-muted d-block">Status</span>
+                  <span class="badge" [ngClass]="{
+                    'bg-warning-subtle text-warning-emphasis': pedido.status === 'PENDENTE',
+                    'bg-success-subtle text-success-emphasis': pedido.status === 'CONCLUIDO',
+                    'bg-danger-subtle text-danger-emphasis': pedido.status === 'CANCELADO'
+                  }">
+                    {{pedido.status}}
+                  </span>
+                </div>
+
+                <div class="ms-auto text-end">
+                  <span class="text-uppercase small fw-bold text-muted d-block">Total</span>
+                  <span class="fw-bold text-primary fs-5">{{pedido.total | currency:'BRL'}}</span>
+                </div>
+              </div>
+            </button>
+          </h2>
+
+          <div [id]="'collapse' + i" class="accordion-collapse collapse" data-bs-parent="#accordionPedidos">
+            <div class="accordion-body bg-light-subtle p-4">
+              <div class="row mb-4">
+                <div class="col-md-6 text-start">
+                  <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Informações de Pagamento</h6>
+                  <p class="mb-1 text-muted"><strong>Método de Pagamento:</strong> {{pedido.metodoPagamento}}</p>
+
+                  <p class="mb-0 text-muted"><strong>Cliente:</strong> {{cliente?.nome}}</p>
+                </div>
+              </div>
+
+              <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Itens do Pedido</h6>
+              <div class="table-responsive">
+                <table class="table table-borderless align-middle">
+                  <thead class="table-light">
+                  <tr class="small text-uppercase text-muted">
+                    <th>Produto</th>
+                    <th class="text-center">Qtd</th>
+                    <th class="text-end">Subtotal</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @for (item of pedido.produtos; track item.produto.codigo) {
+                      <tr>
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <img [src]="'produto_' + item.produto.codigo + '.jpg'"
+                                 class="rounded-2 me-3 border" width="50" height="50" style="object-fit: contain;">
+                            <span class="fw-medium">{{item.produto.nome}}</span>
+                          </div>
+                        </td>
+                        <td class="text-center">{{item.qtd}}</td>
+                        <td class="text-end fw-bold">{{item.subTotal | currency:'BRL'}}</td>
+                      </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="text-center py-5">
+      <i class="bi bi-box-seam display-1 text-light-emphasis"></i>
+      <p class="fs-4 text-muted mt-3">
+        {{ !estaLogado ? 'Faça login para ver seus pedidos.' : (mensagem || 'Você ainda não possui pedidos.') }}
+      </p>
+      <a href="/" class="btn btn-primary px-5 py-2 rounded-pill fw-bold shadow-sm">
+        {{ !estaLogado ? 'IR PARA LOGIN' : 'IR PARA AS COMPRAS' }}
+      </a>
+    </div>
+  }
+</div>

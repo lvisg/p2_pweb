@@ -1,0 +1,21 @@
+
+.container-texto-minimalista p {
+  line-height: 1.75;
+}
+
+.linha-altura-suave {
+  line-height: 1.85;
+}
+
+.tracking-wide {
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.border-top {
+  border-color: #f2f2f2 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}

@@ -1,0 +1,22 @@
+.form-control {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+.form-label {
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+.seletor-botao-recuperar {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.seletor-botao-recuperar:hover {
+  transform: translateY(-2px) !important; /* Adicionado !important para vencer o Bootstrap */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}

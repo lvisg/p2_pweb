@@ -1,0 +1,53 @@
+
+.product-image-container {
+  transition: transform 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.product-image-container:hover .transition-zoom {
+  transform: scale(1.05);
+}
+
+.transition-zoom {
+  transition: transform 0.5s ease;
+}
+
+.product-img {
+  max-height: 500px;
+  width: auto;
+  object-fit: contain;
+}
+.brand-badge {
+  letter-spacing: 1px;
+}
+
+.fw-extrabold {
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn-buy {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.btn-cart {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}

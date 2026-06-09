@@ -1,0 +1,41 @@
+
+.form-control {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+.form-label {
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.seletor-botao-contato {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  min-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .border-start-md {
+    border-left: 1px solid #eee !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .seletor-botao-contato {
+    width: 100%;
+  }
+  .border-start-md {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid #eee;
+  }
+}

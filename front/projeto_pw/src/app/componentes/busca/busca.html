@@ -1,0 +1,37 @@
+<div id="container" class="container row mx-auto g-4">
+  <h4>{{ mensagem }}</h4>
+  @for (obj of lista; track obj.codigo) {
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+      <div class="card align-items-center">
+
+        <img id="img_prod"
+             class="card-img-top mx-auto d-block"
+             src="produto_{{obj.codigo}}.jpg"
+             (click)="redirecionar(obj)">
+
+        <div class="card-body">
+          <h4 class="card-title">{{ obj.nome }}</h4>
+          <p id="preco" class="card-text">
+            @if (obj.promo > 0 && obj.promo < obj.valor) {
+              de: <s>R$ {{ obj.valor }} <br></s>
+              por: <strong>R$ {{ obj.promo }}</strong>
+            } @else {
+              <strong>R$ {{ obj.valor }}</strong>
+            }
+
+            @if (obj.qtd> 0) {
+              <br>
+              <button id="comprar" type="button" class="btn btn-primary mb-3" (click)="carrinhoService.comprar(obj)">Comprar</button>
+              <br>
+              <button id="add_carrinho" type="button" class="btn btn-primary mt-3" (click)="carrinhoService.adicionarProduto(obj)">Adicionar
+                ao Carrinho
+              </button>
+            } @else {
+              <br>Sem estoque
+            }
+          </p>
+        </div>
+      </div>
+    </div>
+  }
+</div>

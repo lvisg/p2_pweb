@@ -1,0 +1,35 @@
+
+.nav-pills .nav-link {
+  color: #6c757d;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #e9ecef;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+.form-control {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+.card-contato {
+  transition: transform 0.2s ease;
+}
+
+.card-contato:hover {
+  transform: translateY(-3px);
+}

@@ -1,0 +1,43 @@
+
+.form-control {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+.form-label {
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.seletor-botao-acao, .seletor-botao-login,.seletor-botao-sair {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.seletor-botao-acao:hover, .seletor-botao-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.seletor-botao-acao,.seletor-botao-sair {
+  margin-left: 10px;
+  min-width: 250px;
+}
+
+
+.text-link-sutil {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .seletor-botao-acao {
+    width: 100%;
+  }
+}

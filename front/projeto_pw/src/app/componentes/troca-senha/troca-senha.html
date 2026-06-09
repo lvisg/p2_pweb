@@ -1,0 +1,38 @@
+<main class="container my-5 px-lg-4">
+  <div class="row justify-content-center">
+    <div class="col-md-7 col-lg-5">
+      <div class="card border-0 shadow-sm rounded-4 bg-white p-4 p-lg-5">
+        <header class="text-center mb-4">
+          <h3 class="fw-bold text-dark mb-1">Recuperação de Senha</h3>
+          <p class="text-muted small">Insira e confirme sua nova senha de acesso para prosseguir</p>
+        </header>
+        @if (mensagem) {
+          <div class="alert alert-info border-0 py-2 small shadow-sm mb-4" id="id_alerta_nova_senha" role="alert">
+            <i class="bi bi-info-circle me-2"></i> {{ mensagem }}
+          </div>
+        }
+
+        <form class="row g-3">
+          <div class="col-12">
+            <label for="id_nova_senha" class="form-label small fw-bold text-secondary">Nova Senha</label>
+            <input type="password" class="form-control rounded-pill px-3 estilizacao-input-senha"
+                   id="id_nova_senha" [(ngModel)]="senha" name="novaSenha" placeholder="Digite a nova senha">
+          </div>
+          <div class="col-12">
+            <label for="id_confirmacao_senha" class="form-label small fw-bold text-secondary">Confirme a Senha</label>
+            <input type="password" class="form-control rounded-pill px-3 estilizacao-input-senha"
+                   id="id_confirmacao_senha" [(ngModel)]="confirmacao" name="confirmacaoSenha" placeholder="Repita a nova senha">
+          </div>
+          <div class="col-12 mt-4">
+            <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 shadow-sm fw-bold text-uppercase seletor-botao-confirmar"
+                    (click)="trocaSenha(senha, confirmacao)">
+              Confirmar Alteração
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</main>

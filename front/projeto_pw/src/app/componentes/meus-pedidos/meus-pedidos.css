@@ -1,0 +1,48 @@
+/* Botão do Accordion customizado para a identidade BBDS */
+.accordion-button {
+  background-color: #fff !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.accordion-button::after {
+  background-size: 1.2rem;
+}
+
+/* Badge de Status com cores suaves e modernas */
+.badge {
+  padding: 0.5em 1em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Bordas arredondadas para os itens do pedido */
+.accordion-item {
+  border: 1px solid #eee !important;
+}
+
+.bg-light-subtle {
+  background-color: #fafafa !important;
+}
+
+/* Ajustes na tabela interna */
+.table thead th {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.table tbody td {
+  padding: 1rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Hover nos itens da lista */
+.accordion-item:hover {
+  border-color: var(--bs-primary) !important;
+  transition: border-color 0.3s ease;
+}

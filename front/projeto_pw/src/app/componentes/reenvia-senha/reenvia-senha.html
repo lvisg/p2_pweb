@@ -1,0 +1,52 @@
+<main class="container my-5 px-lg-4">
+  <div class="row justify-content-center">
+    <!-- Ajustado de col-lg-6 col-xl-5 para col-lg-5 (idêntico ao padrão adotado) -->
+    <div class="col-md-7 col-lg-5">
+
+      <div class="card border-0 shadow-sm rounded-4 bg-white p-4 p-lg-5">
+
+        <header class="text-center mb-4">
+          <h3 class="fw-bold text-dark mb-1">Recuperar Senha</h3>
+          <p class="text-muted small">Informe seus dados para receber as instruções de recuperação</p>
+        </header>
+
+        @if (mensagem) {
+          <div class="alert alert-info border-0 py-2 small shadow-sm mb-4" id="id_alerta_recuperacao" role="alert">
+            <i class="bi bi-info-circle me-2"></i> {{ mensagem }}
+          </div>
+        }
+
+        <form class="row g-3">
+
+          <div class="col-12">
+            <label for="id_cpf_recuperacao" class="form-label small fw-bold text-secondary">CPF</label>
+            <input type="text" class="form-control rounded-pill px-3" id="id_cpf_recuperacao"
+                   [(ngModel)]="cpf" name="cpf" mask="000.000.000-00" placeholder="000.000.000-00">
+          </div>
+
+          <div class="col-12">
+            <label for="id_email_recuperacao" class="form-label small fw-bold text-secondary">E-mail</label>
+            <input type="email" class="form-control rounded-pill px-3" id="id_email_recuperacao"
+                   [(ngModel)]="email" name="email" placeholder="exemplo@email.com">
+          </div>
+
+          <div class="col-12 mt-4">
+            <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 shadow-sm fw-bold text-uppercase seletor-botao-recuperar .btn-lg"
+                    (click)="reenviaSenha(cpf, email)">
+              Reenviar Senha
+            </button>
+          </div>
+
+          <div class="col-12 text-center mt-4 border-top pt-3">
+            <span class="text-muted small d-block mb-2">Lembrou sua senha?</span>
+            <a href="login" id="id_link_voltar_login" class="btn btn-outline-primary rounded-pill w-100 py-2 fw-bold text-uppercase">
+              Voltar para o Login
+            </a>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</main>

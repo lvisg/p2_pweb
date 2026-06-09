@@ -1,0 +1,137 @@
+<main class="container my-5 px-lg-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-md-10">
+
+      <!-- Mensagem de Feedback Global -->
+      @if (mensagem) {
+        <div class="alert alert-info border-0 py-2 small shadow-sm mb-4" role="alert">
+          <i class="bi bi-info-circle me-2"></i> {{ mensagem }}
+        </div>
+      }
+      @if (estaLogado) {
+        <div class="card border-0 shadow-sm rounded-4 bg-white p-4 p-lg-5">
+          <header class="mb-4 text-center text-md-start d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+              <h3 class="fw-bold text-dark mb-1">Minha Conta</h3>
+              <p class="text-muted small mb-0">Bem-vindo de volta, <span class="text-primary fw-bold">{{ cliente?.nome }}!</span></p>
+            </div>
+          </header>
+
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="id_nome" class="form-label small fw-bold text-secondary">Nome</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_nome" [(ngModel)]="cliente!.nome" name="nome">
+            </div>
+            <div class="col-md-6">
+              <label for="id_sobrenome" class="form-label small fw-bold text-secondary">Sobrenome</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_sobrenome" [(ngModel)]="cliente!.sobrenome" name="sobrenome">
+            </div>
+
+            <div class="col-md-7">
+              <label for="id_email" class="form-label small fw-bold text-secondary">Email</label>
+              <input type="email" class="form-control rounded-pill px-3" id="id_email" [(ngModel)]="cliente!.email" name="email">
+            </div>
+            <div class="col-md-5">
+              <label for="id_telefone" class="form-label small fw-bold text-secondary">Telefone</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_telefone" mask="(00) 00000-0000" [(ngModel)]="cliente!.telefone" name="telefone">
+            </div>
+
+            <div class="col-md-6">
+              <label for="id_cpf" class="form-label small fw-bold text-secondary">CPF</label>
+              <input type="text" class="form-control rounded-pill px-3 bg-light" id="id_cpf" mask="000.000.000-00" [(ngModel)]="cliente!.cpf" name="cpf">
+            </div>
+            <div class="col-md-6">
+              <label for="id_senha_perfil" class="form-label small fw-bold text-secondary">Senha</label>
+              <input type="password" class="form-control rounded-pill px-3" id="id_senha_perfil" [(ngModel)]="cliente!.senha" name="senha">
+            </div>
+            <div class="col-md-4">
+              <label for="id_cep" class="form-label small fw-bold text-secondary">CEP</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_cep" mask="00000-000" [(ngModel)]="cliente!.cep" name="cep">
+            </div>
+            <div class="col-md-8">
+              <label for="id_logradouro" class="form-label small fw-bold text-secondary">Logradouro</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_logradouro" [(ngModel)]="cliente!.logradouro" name="logradouro">
+            </div>
+
+            <div class="col-md-3">
+              <label for="id_numero" class="form-label small fw-bold text-secondary">Número</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_numero" [(ngModel)]="cliente!.numero" name="numero">
+            </div>
+            <div class="col-md-5">
+              <label for="id_complemento" class="form-label small fw-bold text-secondary">Complemento</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_complemento" [(ngModel)]="cliente!.complemento" name="complemento">
+            </div>
+            <div class="col-md-4">
+              <label for="id_bairro" class="form-label small fw-bold text-secondary">Bairro</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_bairro" [(ngModel)]="cliente!.bairro" name="bairro">
+            </div>
+
+            <div class="col-md-8">
+              <label for="id_cidade" class="form-label small fw-bold text-secondary">Cidade</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_cidade" [(ngModel)]="cliente!.cidade" name="cidade">
+            </div>
+            <div class="col-md-4">
+              <label for="id_estado" class="form-label small fw-bold text-secondary">Estado</label>
+              <input type="text" class="form-control rounded-pill px-3" id="id_estado" [(ngModel)]="cliente!.estado" name="estado">
+            </div>
+
+            <div class="col-12 mt-4 pt-2 text-center text-md-start">
+              <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 shadow fw-bold text-uppercase seletor-botao-cadastro" (click)="atualizarDados(cliente!)">
+                Salvar Alterações
+              </button>
+              <button type="button" class="btn btn-outline-danger rounded-pill px-5 text-uppercase  seletor-botao-sair" (click)="logout()">
+                <i class="bi bi-box-arrow-right me-2"></i>Sair da Conta
+              </button>
+            </div>
+          </form>
+        </div>
+      } @else {
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-5">
+            <div class="card border-0 shadow-sm rounded-4 bg-white p-4 p-lg-5">
+
+              <header class="mb-4 text-center">
+                <h3 class="fw-bold text-dark mb-1">Identificação</h3>
+                <p class="text-muted small">Acesse sua conta para gerenciar seus pedidos</p>
+              </header>
+
+              <form class="row g-3">
+                <div class="col-12">
+                  <label for="id_cpf_login" class="form-label small fw-bold text-secondary">CPF</label>
+                  <input type="text" class="form-control rounded-pill px-3" id="id_cpf_login" [(ngModel)]="cpf" name="cpf" mask="000.000.000-00" placeholder="000.000.000-00">
+                </div>
+
+                <div class="col-12">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label for="id_senha_login" class="form-label small fw-bold text-secondary mb-0">Senha</label>
+                    <a href="reenvia-senha" id="id_link_esqueci_senha" class="small text-decoration-none fw-medium text-primary text-link-sutil">Esqueceu a senha?</a>
+                  </div>
+                  <input type="password" class="form-control rounded-pill px-3" id="id_senha_login" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha">
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="button" class="btn btn-primary btn-lg rounded-pill w-100 shadow-sm fw-bold text-uppercase seletor-botao-login" (click)="autenticar(cpf,senha)">
+                    Entrar
+                  </button>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                  <span class="text-muted small d-block mb-2">Novo na BBDS Telecom?</span>
+                  <a href="cadastro" id="id_botao_criar_conta" class="btn btn-outline-primary rounded-pill w-100 py-2 fw-bold text-uppercase">
+                    Criar minha conta
+                  </a>
+                </div>
+
+                <div class="col-12 text-center mt-4 border-top pt-3">
+                  <p class="small text-muted mb-0">Ficou com alguma dúvida? <a href="contato" id="id_link_contato" class="fw-bold text-primary text-decoration-none">Fale conosco</a></p>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+</main>

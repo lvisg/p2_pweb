@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9dc5458-91ea-474d-a108-4d45f275b7c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/buscaservice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/clienteservice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/busca.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/buscaservice.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/busca.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/carrinho/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/carrinho/carrinho.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/cliente.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/cliente.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/item-cesta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/item-cesta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/pedido.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/pedido.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/produto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/produto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/carrinhoservice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/carrinhoservice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/loginservice.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/loginservice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/pedidoservice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/pedidoservice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_pw/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/projeto_pw" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EgqVU0MZEdjs7kN0HFbT8fbYDh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.busca.ts.executor": "Debug",
+    "Node.js.clienteservice.ts.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.rename.search.for.dynamic.occurrences": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Luis\OneDrive\Fatec\Prog_Web\p2\front\projeto_pw\src\app\services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.clienteservice.ts">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="clienteservice.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/projeto_pw/src/app/services/clienteservice.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/projeto_pw/src/app/services">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.clienteservice.ts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9dc5458-91ea-474d-a108-4d45f275b7c3" name="Changes" comment="" />
+      <created>1780610583304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780610583304</updated>
+      <workItem from="1780610587317" duration="20725000" />
+      <workItem from="1780707462257" duration="8323000" />
+      <workItem from="1780766724592" duration="6198000" />
+      <workItem from="1780850963361" duration="28620000" />
+      <workItem from="1780886609258" duration="7162000" />
+      <workItem from="1780960355806" duration="11056000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/projeto_pw/src/app/services/buscaservice.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/projeto_pw/src/app/services/clienteservice.ts</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/projeto_pw/src/app/services/pedidoservice.ts</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts</url>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

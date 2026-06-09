@@ -1,0 +1,147 @@
+<div class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow py-2">
+      <div class="container-fluid px-lg-4">
+
+        <a class="navbar-brand d-flex align-items-center m-0 p-0" href="/">
+          <img id="logo_topo" src="dentrotopo.png" alt="Logo da BBDS" height="40" class="d-inline-block align-top">
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+          <ul class="navbar-nav mx-auto w-100 my-3 my-lg-0" style="max-width: 700px;">
+            <li class="nav-item w-100 px-lg-4">
+              <form id="busca" class="d-flex w-100" role="search" (submit)="buscarProduto(termo)">
+                <div class="input-group search-container">
+                  <input
+                    type="search"
+                    class="form-control border-0 ps-4 py-2 shadow-none custom-search-input"
+                    placeholder="O que você procura hoje?"
+                    [(ngModel)]="termo"
+                    name="busca"
+                  />
+                  <button class="btn btn-white text-primary border-0 px-3 d-flex align-items-center" type="submit">
+                    <i class="bi bi-search fs-5"></i>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto align-items-center gap-2 gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link fw-medium d-flex align-items-center" href="sobre-nos">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium d-flex align-items-center" href="contato">Contato</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center justify-content-center p-2" href="carrinho">
+                <img src="carrinho.png" alt="Carrinho" height="26">
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle d-flex align-items-center gap-2 bg-white bg-opacity-10 rounded-pill px-3 py-1 border border-white border-opacity-10"
+                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="user_icon.png" alt="User" height="24" class="rounded-circle">
+                <span class="small fw-bold">
+                  @if (clienteService.isLogado()) {
+                    {{ clienteService.cliente?.nome }}
+                  } @else {
+                    Entrar
+                  }
+                </span>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end bg-primary border-0 shadow-lg mt-2 py-2 overflow-hidden">
+                @if (clienteService.isLogado()) {
+                  <li>
+                    <a class="dropdown-item text-white d-flex align-items-center py-2 px-3" href="meus-pedidos">
+                      <i class="bi bi-box me-3 fs-5"></i><span>Meus Pedidos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white d-flex align-items-center py-2 px-3" href="login">
+                      <i class="bi bi-person-gear me-3 fs-5"></i><span>Meu Perfil</span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider border-white opacity-20"></li>
+                  <li>
+                    <a class="dropdown-item text-white-50 d-flex align-items-center py-2 px-3 hover-danger" (onclick)=this.clienteService.logout()>
+                      <i class="bi bi-box-arrow-right me-3 fs-5"></i><span>Sair</span>
+                    </a>
+                  </li>
+                } @else {
+                  <li><a class="dropdown-item text-white py-2 px-3" href="login">Entrar</a></li>
+                  <li><a class="dropdown-item text-white py-2 px-3" href="cadastro">Criar Conta</a></li>
+                }
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<style>
+
+  .search-container {
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .search-container:focus-within {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+  }
+  .custom-search-input { font-size: 0.9rem; }
+
+  .btn-white { background-color: white; }
+  .btn-white:hover { color: #003d7a !important; }
+
+
+  .dropdown-item i {
+    width: 20px;
+    text-align: center;
+  }
+  .dropdown-item {
+    transition: transform 0.2s;
+  }
+  .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(5px);
+  }
+  .hover-danger:hover { background-color: #dc3545 !important; color: white !important; }
+
+  .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+</style>
+
+<style>
+
+  .hover-light:hover { color: #fff !important; transition: 0.2s; }
+  .nav-link:hover { opacity: 0.9; }
+
+  .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+  }
+  .dropdown-item.hover-danger:hover {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+  }
+</style>

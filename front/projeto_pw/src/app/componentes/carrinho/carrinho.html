@@ -1,0 +1,57 @@
+
+<div id="topo" class="container mt-4">
+  <header>
+    <h3>Meu Carrinho</h3>
+    @if (carrinhoService.lista.length === 0) {
+      <div class="alert alert-info ">
+        <h4>{{ mensagem || 'Seu carrinho está vazio!' }}</h4>
+        <a href="/" class="btn btn-primary btn-sm">Voltar às compras</a>
+      </div>
+    }
+  </header>
+
+  <main class="h-100">
+    <ul class="list-group shadow-sm">
+      @for (obj of carrinhoService.lista; track obj.produto.codigo) {
+        <li id="produto" class="list-group-item d-flex align-items-center justify-content-between p-3">
+          <div class="d-flex align-items-center">
+            <div class="ms-3">
+              <img src="produto_{{obj.produto.codigo}}.jpg" alt="">
+              <h6 class="mb-0 fw-bold">{{ obj.produto.nome }}</h6>
+              <small class="text-muted">Código: {{ obj.produto.codigo }}</small>
+            </div>
+          </div>
+
+          <div class="text-end">
+            <p id="valor_produto" class="mb-0 fw-bold">
+              {{ obj.produto.valor | currency:'BRL' }}
+            </p>
+            <div class="d-flex align-items-center mt-2">
+              <span class="badge bg-terciary me-2">
+                <p id="qtd">Qtd:</p>
+                <select #selectQtd class="form-select" name="Qtd"
+                  (change)="carrinhoService.alteraQuantidade(obj, selectQtd.value)">
+                  <option [value]="obj.qtd" selected>{{obj.qtd}}</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                </span>
+              <button class="btn btn-outline-danger btn-sm" (click)="carrinhoService.removerProduto(obj)">
+                <i class="bi bi-trash"></i> Remover
+              </button>
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+
+    @if (carrinhoService.lista.length > 0) {
+      <div class="mt-4 p-3 border-top d-flex justify-content-between align-items-center">
+        <h4 class="text-primary fw-bold">Total: <span id="total" >{{ carrinhoService.total | currency:'BRL' }}</span></h4>
+        <button class="btn btn-primary" (click)="carrinhoService.checkout(true)">Finalizar Compra</button>
+      </div>
+    }
+  </main>
+</div>

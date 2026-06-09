@@ -1,0 +1,92 @@
+<div class="container mt-4">
+  <header class="mb-4">
+    <h1>Finalizar Compra</h1>
+    <p>{{mensagem}}</p>
+
+</header>
+    <h2>Verifique o endereço de entrega</h2>
+    <div class="list-group shadow-sm mb-3">
+    <div class="list-group-item d-flex justify-content-between p-3">
+      <div class="text-start">
+        {{ clienteService.cliente?.logradouro }}, {{ clienteService.cliente?.numero }} -
+        {{ clienteService.cliente?.bairro }}. {{ clienteService.cliente?.cidade }} <br>
+        {{ clienteService.cliente?.cep }}
+      </div>
+    </div>
+  </div>
+  <strong><h3>Escolha um método de Pagamento</h3></strong>
+  <div>
+    <div class="list-group shadow-sm">
+      <div class="list-group-item d-flex align-items-left  p-3" (click)="selecionaMetodo('PIX')" [class.active]="metodoPagamento==='PIX'">
+        <img src="pix.webp" class="me-3" alt="Logo Pix">Pix
+      </div>
+      <div class="list-group-item d-flex align-items-left  p-3" (click)="selecionaMetodo('CARTAO')" [class.active]="metodoPagamento === 'CARTAO'">
+        <img src="credit-card.png" class="me-3" title="credit card icons" alt="ícone cartão de crédito"> Cartão de Crédito
+      </div>
+      <div class="list-group-item d-flex align-items-left  p-3" (click)="selecionaMetodo('BOLETO')" [class.active]="metodoPagamento==='BOLETO'">
+        <img src="boleto.png" class="me-3" alt="ícone boleto bancário">Boleto Bancário
+      </div>
+
+    </div>
+  </div>
+        <h4>Revise seus Produtos</h4>
+        <div>
+           <div class="list-group shadow-sm">
+                @if (carrinhoService.itemCompraDireta != null) {
+                    <div class="list-group-item d-flex align-items-center justify-content-between p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="ms-3">
+                                {{carrinhoService.itemCompraDireta.qtd}} x
+                                <img [src]="'produto_' + carrinhoService.itemCompraDireta.produto.codigo + '.jpg'" alt="{{carrinhoService.itemCompraDireta.produto.nome}}">
+                                <h6 class="mb-0 fw-bold">{{carrinhoService.itemCompraDireta.produto.nome}}</h6>
+                                </div>
+                            </div>
+                                <div class="text-end">
+                                    <p class="mb-0">
+                                        {{ carrinhoService.itemCompraDireta.produto.valor | currency:'BRL' }}
+                                    </p>
+                                </div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-6 text-start fw-bold p-3">Total</div>
+                        <div class="col-6 text-end fw-bold p-3">
+                            {{ carrinhoService.total | currency:'BRL' }}
+                        </div>
+                    </div>
+
+                }@else{
+                    @for (obj of carrinhoService.lista; track obj.produto.codigo) {
+                        <li class="list-group-item d-flex align-items-center justify-content-between p-3">
+                            <div class="d-flex align-items-center">
+                                <div class="ms-3">
+                            {{obj.qtd}} x
+                                <img [src]="'produto_' + obj.produto.codigo + '.jpg'" alt="{{obj.produto.nome}}">
+                                <h6 class="mb-0 fw-bold">{{obj.produto.nome}}</h6>
+                                </div>
+                            </div>
+                                <div class="text-end">
+                                    <p class="mb-0">
+                                        {{ obj.produto.valor | currency:'BRL' }}
+                                    </p>
+                                </div>
+                        </li>
+                    }
+                    <div class="row mt-3 mb-3">
+                    <div class="col-6 text-start fw-bold p-3">Total</div>
+                    <div class="col-6 text-end fw-bold p-3">
+                        {{ carrinhoService.total | currency:'BRL' }}
+                    </div>
+                    </div>
+            }
+
+
+            </div>
+            @if (carrinhoService.itemCompraDireta != null) {
+                <button class="btn btn-primary mt-3" (click)="finalizaPedido(carrinhoService.listaCompraDireta)">Finalizar Compra</button>
+            }@else{
+                <button class="btn btn-primary mt-3" (click)="finalizaPedido(carrinhoService.lista)">Finalizar Compra</button>
+            }
+
+            <button class="btn btn-outline-secondary mt-3 mx-3" onclick="window.location.href='carrinho'">Retornar ao Carrinho</button>
+        </div>
+    </div>

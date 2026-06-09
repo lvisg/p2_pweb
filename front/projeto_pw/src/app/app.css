@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+nav.navbar {
+  min-height: 80px;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  color: white !important;
+}
+
+#busca {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #0d6efd;
+    padding: 1rem;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+}
+
+.search-container {
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.custom-search-input::placeholder {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}

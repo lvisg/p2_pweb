@@ -1,0 +1,93 @@
+<main class="container my-5 px-lg-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+
+      <div class="card border-0 shadow-sm rounded-4 bg-white p-4 p-lg-5">
+        <div class="row g-5">
+
+          <div class="col-md-7">
+            <header class="mb-4">
+              <h3 class="fw-bold text-dark mb-1">Contato</h3>
+              <p class="text-muted small">Preencha os campos abaixo e entraremos em contato o mais breve possível.</p>
+
+              @if (mensagem) {
+                <div class="alert alert-success border-0 py-2 small shadow-sm mt-3" id="id_alerta_sucesso">
+                  <i class="bi bi-check-circle me-2"></i> {{ mensagem }}
+                </div>
+              }
+            </header>
+
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="id_nome_contato" class="form-label small fw-bold text-secondary">Nome Completo</label>
+                <input type="text" class="form-control rounded-pill px-3" id="id_nome_contato"
+                       [(ngModel)]="nome" name="nome" placeholder="Seu nome completo">
+              </div>
+
+              <div class="col-md-6">
+                <label for="id_email_contato" class="form-label small fw-bold text-secondary">E-mail</label>
+                <input type="email" class="form-control rounded-pill px-3" id="id_email_contato"
+                       [(ngModel)]="email" name="email" placeholder="email@exemplo.com">
+              </div>
+
+              <div class="col-md-6">
+                <label for="id_telefone_contato" class="form-label small fw-bold text-secondary">Telefone</label>
+                <input type="text" class="form-control rounded-pill px-3" id="id_telefone_contato"
+                       [(ngModel)]="telefone" name="telefone" mask="(00) 00000-0000" placeholder="(00) 00000-0000">
+              </div>
+
+              <div class="col-12">
+                <label for="id_titulo_contato" class="form-label small fw-bold text-secondary">Assunto</label>
+                <input type="text" class="form-control rounded-pill px-3" id="id_titulo_contato"
+                       [(ngModel)]="assunto" name="assunto" placeholder="Ex: Dúvida sobre produto">
+              </div>
+
+              <div class="col-12">
+                <label for="id_mensagem_texto" class="form-label small fw-bold text-secondary">Mensagem</label>
+                <textarea class="form-control rounded-4 px-3 py-3" rows="5" id="id_mensagem_texto"
+                          name="corpo" [(ngModel)]="corpo" placeholder="Como podemos ajudar?"></textarea>
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="button" class="btn btn-primary btn-lg rounded-pill px-5 shadow-sm fw-bold text-uppercase seletor-botao-contato"
+                        (click)="enviar()">
+                  Enviar Mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-5 border-start-md ps-md-5">
+            <div class="pt-2">
+              <h5 class="fw-bold text-dark mb-4">Canais Diretos</h5>
+
+              <div class="mb-4">
+                <label class="text-primary fw-bold small text-uppercase d-block mb-2" style="letter-spacing: 1px;">Financeiro</label>
+                <div class="d-flex align-items-center text-muted">
+                  <i class="bi bi-telephone-fill me-2"></i>
+                  <span class="fs-5 fw-medium">(11) 4063-6255</span>
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <label class="text-primary fw-bold small text-uppercase d-block mb-2" style="letter-spacing: 1px;">Vendas / WhatsApp</label>
+                <div class="d-flex align-items-center text-muted">
+                  <i class="bi bi-whatsapp me-2"></i>
+                  <span class="fs-5 fw-medium">(11) 99546-2080</span>
+                </div>
+              </div>
+
+              <div class="bg-light p-4 rounded-4">
+                <h6 class="fw-bold text-dark mb-2 small"><i class="bi bi-clock me-2"></i>Horários de Atendimento</h6>
+                <p class="small text-muted mb-0">Segunda a Sexta: 08:00 às 18:00</p>
+                <p class="small text-muted">Sábado: 09:00 às 13:00</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,61 @@
+<main class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+  <div class="row w-100 justify-content-between align-items-center">
+
+    <div class="col-md-6 text-center mb-5 mb-md-0">
+      <div class="product-image-container p-4 bg-white rounded-4 shadow-sm">
+        <img src="produto_{{obj.codigo}}.jpg"
+             [alt]="obj.nome"
+             class="img-fluid transition-zoom product-img" />
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="ps-lg-4">
+
+        <h6 class="card-title fw-bold text-dark titulo-produto">{{ obj.nome }}</h6>
+
+        <div class="mb-4">
+          @if(obj.promo > 0 && obj.promo < obj.valor){
+            <div class="d-flex align-items-center gap-3">
+              <span class="text-muted fs-5"><s class="opacity-50">R$ {{obj.valor}}</s></span>
+              <span class="badge bg-danger">Oferta</span>
+            </div>
+            <div class="text-primary display-5 fw-extrabold">{{obj.promo | currency:'BRL' }}</div>
+          } @else {
+            <div class="text-primary display-5 fw-extrabold">{{obj.valor | currency:'BRL' }}</div>
+          }
+        </div>
+        <div class="mb-4">
+          <h6 class="fw-bold text-dark text-uppercase small mb-2">Descrição</h6>
+          <p class="text-muted product-description">
+            {{obj.descricao}}
+          </p>
+        </div>
+        <div class="pt-3">
+          @if (obj.qtd > 0) {
+            <div class="d-grid gap-3">
+              <button type="button"
+                      class="btn btn-primary btn-lg shadow-sm btn-buy text-uppercase"
+                      (click)="carrinhoService.comprar(obj)">
+                Comprar Agora
+              </button>
+
+              <button type="button"
+                      class="btn btn-outline-primary btn-lg btn-cart text-uppercase d-flex align-items-center justify-content-center gap-2"
+                      (click)="carrinhoService.adicionarProduto(obj)">
+                <i class="bi bi-cart-plus fs-5"></i>
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          } @else {
+            <div class="alert alert-secondary text-center border-0 rounded-4 py-3" role="alert">
+              <i class="bi bi-info-circle me-2"></i> Este produto está <strong>Indisponível</strong> no momento.
+            </div>
+          }
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>

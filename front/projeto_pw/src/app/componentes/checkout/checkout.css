@@ -1,0 +1,17 @@
+img{
+    height:3vh;
+}
+#total{
+    margin: 1.5%;
+}
+
+.list-group-item.active {
+  background-color: #ebf5ff !important; 
+  color: #007bff !important;
+  border-color: #007bff !important;
+  font-weight: bold;
+}
+
+.list-group-item.active img {
+  filter: none !important; 
+}
