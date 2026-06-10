@@ -40,7 +40,7 @@ export class ClienteService{
     return this.http.post<any>(this.url + '/login', { cpf, senha });
   }
   public atualizar(cpf:string, cliente:Cliente): Observable<any>{
-    return this.http.put<any>(this.url+cpf,cliente);
+    return this.http.put<any>(this.url+"/"+cpf,cliente);
   }
   public reenviaSenha(cpf: string, email: string): Observable<any> {
     this.cliente = new Cliente();

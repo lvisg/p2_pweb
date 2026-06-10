@@ -20,5 +20,5 @@ INSERT INTO produto (codigo, nome, valor, descricao, qtd, keyword, promo) VALUES
 (17, 'Carregador Intelbras USB 20W EC 11', 74.91, 'Carregador compacto de 20W com 2 saídas USB (USB-A e USB-C), compatível com carregamento rápido PD e QC. Proteção contra sobrecarga, curto-circuito e superaquecimento.', 12, 'carregador, usb, power', 0.00),
 (18, 'Carregador de Mesa Intelbras GaN 240W EC 40', 649.90, 'Carregador de mesa com 4 saídas USB-C e tecnologia GaN de alta eficiência, suportando até 240W totais. Ideal para carregar simultaneamente notebooks, tablets e smartphones com carregamento rápido.', 12, 'carregador, usb, power', 0.00);
 insert into admin(codigo,senha) values(1234,"abcd");
-select * from contato;
-select c.nome, p.nome, ped.codigo from pedido as ped join cliente as c on cliente_codigo=c.codigo join pedido_produtos on pedido_id=ped.codigo join produto as p on produto_id=p.codigo where ped.codigo =13;
+delete from cliente where cpf=44444444444;
+select c.nome, p.nome, ped.codigo from pedido as ped join cliente as c on cliente_codigo=c.codigo join pedido_produtos on pedido_id=ped.codigo join produto as p on produto_id=p.codigo;
