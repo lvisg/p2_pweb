@@ -33,7 +33,7 @@ public class Email {
                                 <p style="font-size:16px; color:#333333;">Olá, <strong>%s</strong>!</p>
                                 <p style="font-size:15px; color:#555555;">
                                     Recebemos uma solicitação de recuperação de senha para sua conta.
-                                    Sua nova senha temporária é:
+                                    Seu token de validação é:
                                 </p>
 
                                 <!-- SENHA EM DESTAQUE -->
@@ -52,12 +52,12 @@ public class Email {
                                 </div>
 
                                 <p style="font-size:14px; color:#888888;">
-                                    Por segurança, recomendamos que você altere essa senha após o login.
+                                    Prossiga com a alteração da senha!
                                 </p>
 
                                 <!-- BOTÃO -->
                                 <div style="text-align:center; margin:30px 0;">
-                                    <a href="http://localhost:4200/login"
+                                    <a href="http://localhost:4200/valida-token"
                                        style="
                                            background-color:#1a73e8;
                                            color:#ffffff;
@@ -67,7 +67,7 @@ public class Email {
                                            font-size:16px;
                                            font-weight:bold;
                                            display:inline-block;
-                                       ">Acessar minha conta</a>
+                                       ">Trocar senha</a>
                                 </div>
 
                                 <p style="font-size:13px; color:#aaaaaa;">

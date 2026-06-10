@@ -11,23 +11,34 @@ import { ClienteService } from '../../services/clienteservice';
   styleUrl: './valida-token.css',
 })
 export class ValidaToken {
-  public mensagem:string="";
-  public token:string="";
-  constructor(private clienteService: ClienteService, private router:Router) {
-  }
+  public mensagem: string = '';
+  public token: string = '';
+  constructor(private clienteService: ClienteService, private router: Router) {}
 
   public validaToken(token: string) {
     this.clienteService.validaToken(this.token).subscribe({
       next: (dados) => {
         if (dados) {
           this.router.navigate(['troca-senha']);
-        }else{
+        } else {
           this.mensagem = 'Token inválido, revise-o';
         }
       },
       error: () => {
-        this.mensagem = "Falha na requisição tente novamente mais tarde!";
-      }
-  });
+        this.mensagem = 'Falha na requisição tente novamente mais tarde!';
+      },
+    });
+  }
+  public reenviaToken() {
+    console.log('clicou');
+    this.clienteService
+      .reenviaSenha(this.clienteService.cliente!.cpf, this.clienteService.cliente!.email).subscribe({
+        next: () => {
+          this.mensagem = 'Token Reenviado, verifique seu e-mail!';
+        },
+        error: (err) => {
+          this.mensagem = err.error;
+        },
+      });
   }
 }

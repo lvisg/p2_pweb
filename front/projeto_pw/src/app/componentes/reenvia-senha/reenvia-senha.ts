@@ -20,7 +20,9 @@ export class ReenviaSenha {
   constructor(private clienteService:ClienteService, private router:Router) {
   }
   public reenviaSenha(cpf:string, email: string){
-    console.log("clicou");
+    this.clienteService.cliente=new Cliente();
+    this.clienteService.cliente.cpf=cpf;
+    this.clienteService.cliente.email=email;
     this.clienteService.reenviaSenha(cpf,email).subscribe({
       next:()=>{
         this.router.navigate(["valida-token"]);

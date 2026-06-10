@@ -11,7 +11,7 @@ import { isPlatformBrowser, CurrencyPipe, CommonModule} from '@angular/common';
   selector: 'app-vitrine',
   imports: [CommonModule, CurrencyPipe],
   templateUrl: './vitrine.html',
-  styleUrls: ['./vitrine.css']
+  styleUrls: ['./vitrine.css'],
 })
 export class Vitrine {
   mensagem: string = '';

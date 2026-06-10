@@ -1,37 +1,41 @@
-<div id="container" class="container row mx-auto g-4">
-  <h4>{{ mensagem }}</h4>
-  @for (obj of lista; track obj.codigo) {
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-      <div class="card align-items-center">
-
-        <img id="img_prod"
-             class="card-img-top mx-auto d-block"
-             src="produto_{{obj.codigo}}.jpg"
-             (click)="redirecionar(obj)">
-
-        <div class="card-body">
-          <h4 class="card-title">{{ obj.nome }}</h4>
-          <p id="preco" class="card-text">
-            @if (obj.promo > 0 && obj.promo < obj.valor) {
-              de: <s>R$ {{ obj.valor }} <br></s>
-              por: <strong>R$ {{ obj.promo }}</strong>
-            } @else {
-              <strong>R$ {{ obj.valor }}</strong>
-            }
-
-            @if (obj.qtd> 0) {
-              <br>
-              <button id="comprar" type="button" class="btn btn-primary mb-3" (click)="carrinhoService.comprar(obj)">Comprar</button>
-              <br>
-              <button id="add_carrinho" type="button" class="btn btn-primary mt-3" (click)="carrinhoService.adicionarProduto(obj)">Adicionar
-                ao Carrinho
-              </button>
-            } @else {
-              <br>Sem estoque
-            }
-          </p>
+<div class="container my-5 px-lg-4" style="max-width: 1750px">
+  <h4 class="mb-4 fw-bold text-dark border-bottom pb-2">{{ mensagem }}</h4>
+  <div class="row g-4 justify-content-start">
+    @for (obj of lista; track obj.codigo) {
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card card-produto shadow-sm border-0 w-100 d-flex flex-column h-100">
+          <div class="container-imagem p-3 d-flex align-items-center justify-content-center" (click)="redirecionar(obj)">
+            <img src="produto_{{obj.codigo}}.jpg" [alt]="obj.nome" class="card-img-top imagem-produto">
+          </div>
+          <div class="card-body d-flex flex-column text-center">
+            <h6 class="card-title fw-bold text-dark titulo-produto">{{ obj?.nome }}</h6>
+            <div class="mt-auto">
+              <div class="secao-preco mb-3">
+                @if (obj.promo > 0 && obj.promo < obj.valor) {
+                  <div class="text-muted small"><s>R$ {{ obj.valor }}</s></div>
+                  <div class="text-primary fs-5 fw-bold">{{ obj.promo | currency:'BRL' }}</div>
+                } @else {
+                  <div class="text-primary fs-5 fw-bold">{{ obj.valor | currency:'BRL' }}</div>
+                }
+              </div>
+              <div class="botoes-acao">
+                @if (obj.qtd > 0) {
+                  <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary btn-sm fw-bold py-2" (click)="carrinhoService.comprar(obj)">
+                      Comprar
+                    </button>
+                    <button type="button" class="btn btn-outline-primary btn-sm py-2" (click)="carrinhoService.adicionarProduto(obj)">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                } @else {
+                  <span class="badge bg-secondary w-100 py-2">Sem estoque</span>
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  }
+    }
+  </div>
 </div>

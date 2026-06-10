@@ -24,4 +24,8 @@ export class App implements OnInit{
     this.clienteService.inicializar();
     this.carrinhoService.ngOnInit();
   }
+  public sair(){
+    this.clienteService.logout();
+    this.router.navigate(['']);
+  }
 }

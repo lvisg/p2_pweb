@@ -99,6 +99,9 @@ export class Gestao implements OnInit {
   }
 
   public sair() {
+    this.senha="";
+    this.codigo=0;
+    this.mensagem="";
     this.gestaoService.logout();
     this.pedidos = [];
     this.produtos = [];
