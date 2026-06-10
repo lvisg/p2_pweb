@@ -5,50 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9dc5458-91ea-474d-a108-4d45f275b7c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/buscaservice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/clienteservice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/busca.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/buscaservice.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/busca.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/cadastro/cadastro.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/carrinho/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/carrinho/carrinho.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/checkout/checkout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/contato/contato.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/reenvia-senha/reenvia-senha.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/sobre-nos/sobre-nos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.css" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/componentes/vitrine/vitrine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/cliente.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/cliente.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/item-cesta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/item-cesta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/pedido.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/pedido.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/modelo/produto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/modelo/produto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/carrinhoservice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/carrinhoservice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/loginservice.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/loginservice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/app/services/pedidoservice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/app/services/pedidoservice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_pw/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_pw/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/service/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/service/FerramentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/api-bbds/src/main/java/br/com/fatec/apibbds/service/FerramentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/projeto_pw" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
@@ -74,6 +35,7 @@
     "Node.js.clienteservice.ts.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
@@ -132,7 +94,8 @@
       <workItem from="1780766724592" duration="6198000" />
       <workItem from="1780850963361" duration="28620000" />
       <workItem from="1780886609258" duration="7162000" />
-      <workItem from="1780960355806" duration="11056000" />
+      <workItem from="1780960355806" duration="12524000" />
+      <workItem from="1781048423720" duration="9488000" />
     </task>
     <servers />
   </component>
@@ -158,6 +121,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/projeto_pw/src/app/componentes/detalhe/detalhe.ts</url>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/projeto_pw/src/app/componentes/gestao/gestao.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

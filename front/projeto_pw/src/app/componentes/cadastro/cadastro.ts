@@ -31,31 +31,34 @@ export class Cadastro {
   constructor(private cdr:ChangeDetectorRef,private cepService:CepService, private clienteService:ClienteService){}
 
   public cadastrar(nome: string,sobrenome: string,  email: string, telefone: string, cpf: string, cep: string, logradouro: string, numero: string, complemento: string, bairro: string, cidade: string, senha: string, estado:string) {
-    this.cliente.senha = senha;
-    this.cliente.sobrenome = sobrenome;
-    this.cliente.nome = nome;
-    this.cliente.cpf = cpf;
-    this.cliente.email = email;
-    this.cliente.telefone = telefone;
-    this.cliente.cep = cep;
-    this.cliente.logradouro = logradouro;
-    this.cliente.numero = numero;
-    this.cliente.complemento = complemento;
-    this.cliente.bairro = bairro;
-    this.cliente.cidade = cidade;
-    this.cliente.estado = estado;
-
-    this.clienteService.salvar(this.cliente).subscribe({
-      next: () => {
-        this.mensagem = "Cadastro efetuado!";
-        location.href="login";
-      },
-      error: (err) => {
-        this.mensagem = err.error;
+      if(nome==""|| sobrenome ==""||email==""||cpf=="" ||cep==""||numero==""|| senha==""){
+        this.mensagem="Preencha todos os campos!";
+      }else {
+        this.cliente.senha = senha;
+        this.cliente.sobrenome = sobrenome;
+        this.cliente.nome = nome;
+        this.cliente.cpf = cpf;
+        this.cliente.email = email;
+        this.cliente.telefone = telefone;
+        this.cliente.cep = cep;
+        this.cliente.logradouro = logradouro;
+        this.cliente.numero = numero;
+        this.cliente.complemento = complemento;
+        this.cliente.bairro = bairro;
+        this.cliente.cidade = cidade;
+        this.cliente.estado = estado;
+        this.clienteService.salvar(this.cliente).subscribe({
+          next: () => {
+            this.mensagem = 'Cadastro efetuado!';
+            location.href = 'login';
+          },
+          error: (err) => {
+            this.mensagem = err.error;
+          },
+        });
       }
-    });
+    }
 
-  }
   buscar(cep: string) {
     const cleanCep = cep.replace(/\D/g, '');
 

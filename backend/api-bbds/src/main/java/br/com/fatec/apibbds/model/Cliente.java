@@ -76,7 +76,7 @@ public class Cliente {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(String cpf){
         if(cpf.length()<11){
             throw new IllegalArgumentException("O CPF deve ter 14 dígitos!");
         }else{

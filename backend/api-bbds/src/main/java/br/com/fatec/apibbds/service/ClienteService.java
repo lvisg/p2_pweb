@@ -25,11 +25,14 @@ public class ClienteService {
 
     public Cliente salvar(Cliente cliente) throws Exception{
         if(carregar(cliente.getCpf()).isPresent()){
-            throw new Exception ("CPF já cadastrado");
+            throw new Exception ("CPF já cadastrado, tente recuperar a senha.");
         }else{
-            return clienteRepository.save(cliente);
+            try{
+                return clienteRepository.save(cliente);
+            }catch (Exception e){
+                throw new Exception(e);
         }
-
+}
     }
 
     public void deletar(String cpf){

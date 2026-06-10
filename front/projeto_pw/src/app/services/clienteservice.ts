@@ -22,8 +22,9 @@ export class ClienteService{
     }
   }
   public logout(){
-    localStorage.removeItem("logado");
-    this.cliente = null;
+    localStorage.removeItem('logado');
+    localStorage.removeItem('cliente');
+    this.cliente = new Cliente();
     this.mensagem = "Você saiu da conta.";
   }
   public carregar(cpf:string): Observable<Cliente>{
@@ -36,7 +37,7 @@ export class ClienteService{
     return localStorage.getItem("logado") === "true";
   }
   public autenticar(cpf:string, senha:string): Observable<any>{
-    return this.http.post<any>(this.url+"/login", {cpf, senha});
+    return this.http.post<any>(this.url + '/login', { cpf, senha });
   }
   public atualizar(cpf:string, cliente:Cliente): Observable<any>{
     return this.http.put<any>(this.url+cpf,cliente);
@@ -45,10 +46,10 @@ export class ClienteService{
     this.cliente = new Cliente();
     this.cliente.cpf = cpf;
     this.cliente.email = email;
-    return this.http.post<Cliente>(this.url+"/recupera-senha", this.cliente);
+    return this.http.post<Cliente>(this.url + '/recupera-senha', this.cliente);
   }
   public validaToken(token:string): Observable<boolean>{
-    return this.http.post<boolean>(this.url+"/token", token);
+    return this.http.post<boolean>(this.url + '/token', token);
   }
   public trocaSenha(senha:string):Observable<Cliente>{
     this.cliente!.senha=senha;

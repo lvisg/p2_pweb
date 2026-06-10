@@ -5,6 +5,7 @@ import { Cliente } from '../../modelo/cliente';
 import { ClienteService } from '../../services/clienteservice';
 import {NgxMaskDirective } from 'ngx-mask';
 import { CepService } from '../../services/cep-service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class Login {
   public senha: string = "";
 
 
-  constructor(private clienteService:ClienteService, private cepService:CepService){}
+  constructor(private clienteService:ClienteService, private cepService:CepService, private router:Router){}
   ngOnInit(){
     this.clienteService.inicializar();
   }
@@ -37,9 +38,11 @@ export class Login {
     }
     this.clienteService.autenticar(cpf, senha).subscribe({
       next:(obj:Cliente)=>{
+
         this.clienteService.cliente=obj;
-        localStorage.setItem("logado", "true");
-        location.href="";
+        localStorage.setItem('cliente', JSON.stringify(obj));
+        localStorage.setItem('logado', 'true');
+        this.router.navigate([""]);
       },
       error: (err) => {
       this.mensagem = err.error;

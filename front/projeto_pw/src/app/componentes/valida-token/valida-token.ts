@@ -21,10 +21,12 @@ export class ValidaToken {
       next: (dados) => {
         if (dados) {
           this.router.navigate(['troca-senha']);
+        }else{
+          this.mensagem = 'Token inválido, revise-o';
         }
       },
       error: () => {
-        this.mensagem = "Token inválido, revise-o";
+        this.mensagem = "Falha na requisição tente novamente mais tarde!";
       }
   });
   }

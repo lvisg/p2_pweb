@@ -65,7 +65,29 @@
                 </h2>
                 <div [id]="'collapsePedido' + i" class="accordion-collapse collapse" data-bs-parent="#accordionPedidosAdmin">
                   <div class="accordion-body bg-light-subtle p-4">
+                    <div class="accordion-body bg-light-subtle p-4">
                     <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Itens do Pedido</h6>
+                    <table class="table table-sm">
+                      <thead>
+                      <tr>
+                        <th>Produto</th>
+                        <th>Qtd</th>
+                        <th>Preço Unit.</th>
+                        <th>Subtotal</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        @for (item of pedido.produtos; track $index) {
+                          <tr>
+                            <td>{{item.produto.nome}}</td>
+                            <td>{{item.qtd}}</td>
+                            <td>{{item.produto.valor | currency:'BRL'}}</td>
+                            <td>{{item.subTotal | currency:'BRL'}}</td>
+                          </tr>
+                        }
+                      </tbody>
+                    </table>
+                  </div>
                   </div>
                 </div>
               </div>

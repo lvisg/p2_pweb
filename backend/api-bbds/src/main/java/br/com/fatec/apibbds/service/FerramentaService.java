@@ -10,7 +10,7 @@ import java.util.Random;
 
 @Service
 public class FerramentaService {
-    private Autenticador token = new Autenticador();
+    private Autenticador token;
     private final JavaMailSender smtp;
     public FerramentaService(JavaMailSender smtp){
         this.smtp=smtp;
@@ -30,15 +30,15 @@ public class FerramentaService {
         }
     }
     public String geraToken(){
+        this.token=new Autenticador();
         token.setToken(String.format("%04d", new Random().nextInt(9999)));
         token.setUsado(false);
         return token.getToken();
     }
     public boolean validaToken(String token){
-        if(this.token.getToken().equals(token) && !this.token.isUsado()){
+        if(this.token.getToken().equals(token) && !this.token.isUsado()) {
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
 }

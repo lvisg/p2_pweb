@@ -7,7 +7,7 @@
           <h3 class="fw-bold text-dark mb-1">Cadastro</h3>
           <p class="text-muted small">Preencha os campos abaixo com seus dados pessoais.</p>
           @if (mensagem) {
-            <div class="alert alert-success border-0 py-2 small shadow-sm text-start" role="alert">
+            <div class="alert border-0 py-2 small shadow-sm text-start" role="alert">
               <i class="bi bi-check-circle me-2"></i> {{ mensagem }}
             </div>
           }
@@ -44,7 +44,7 @@
             <label for="senha" class="form-label small fw-bold text-secondary">Senha</label>
             <input type="password" class="form-control rounded-pill px-3" id="senha" [(ngModel)]="senha" name="senha" placeholder="Crie uma senha">
           </div>
-
+          <label for="cep" class="form-label small fw-bold text-secondary">CEP</label>
           <input type="text" class="form-control rounded-pill px-3 border-primary shadow-sm" id="cep" [(ngModel)]="cep" (input)="buscar(cep)" name="cep" mask="00000-000" placeholder="00000-000">
           <div class="col-md-8">
             <label for="logradouro" class="form-label small fw-bold text-secondary">Logradouro</label>

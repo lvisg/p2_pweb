@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { GestaoService } from '../../services/gestaoservice';
 import { ProdutoService } from '../../services/produtoservice';
 import { Produto } from '../../modelo/produto';
+import { Pedido } from '../../modelo/pedido';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, FormsModule],
 })
 export class Gestao implements OnInit {
-  public pedidos: any[] = [];
+  public pedidos: Pedido[] = [];
   public produtos: Produto[] = [];
   public contatos: any[] = [];
   public codigo: number = 0;
